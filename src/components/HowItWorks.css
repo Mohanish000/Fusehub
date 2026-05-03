@@ -1,0 +1,137 @@
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-2xl);
+  position: relative;
+}
+
+.step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-card {
+  width: 100%;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.step-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+  transform: translateY(-8px);
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+  font-family: var(--font-heading);
+}
+
+.step-icon-bg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover .step-icon-bg {
+  transform: scale(1.1);
+}
+
+.step-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.step-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.step-connector {
+  display: none;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-border) 0%, var(--color-primary) 50%, var(--color-border) 100%);
+  margin: var(--space-lg) 0;
+  flex: 1;
+  min-width: 40px;
+}
+
+.step-connector svg {
+  width: 100%;
+  height: 100%;
+  color: var(--color-border);
+}
+
+@media (min-width: 769px) {
+  .steps-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .step-wrapper {
+    position: relative;
+  }
+
+  .step-wrapper:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 100%;
+    width: calc(100% - 80px);
+    height: 2px;
+    background: linear-gradient(to right, var(--color-border) 0%, var(--color-primary) 50%, var(--color-border) 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .step-number {
+    top: -15px;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .step-icon-bg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-icon-bg svg {
+    width: 24px;
+    height: 24px;
+  }
+}

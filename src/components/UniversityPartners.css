@@ -1,0 +1,48 @@
+.universities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-lg);
+}
+
+.university-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  background: white;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 100px;
+}
+
+.university-badge:hover {
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, rgba(255, 92, 58, 0.05) 0%, rgba(14, 165, 160, 0.05) 100%);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.university-badge span {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .universities-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .university-badge {
+    padding: var(--space-md);
+    min-height: 80px;
+  }
+
+  .university-badge span {
+    font-size: 0.85rem;
+  }
+}

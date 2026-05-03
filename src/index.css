@@ -1,0 +1,36 @@
+:root {
+  /* Colors */
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8F8FA;
+  --color-card: #FFFFFF;
+  --color-border: #E8E8EE;
+  --color-text-primary: #1A1A2E;
+  --color-text-secondary: #6B6B80;
+  --color-primary: #FF5C3A;
+  --color-primary-hover: #E04020;
+  --color-highlight: #FFF0EC;
+  --color-success: #0EA5A0;
+  --color-dark: #1A1A2E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}

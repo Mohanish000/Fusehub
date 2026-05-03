@@ -1,0 +1,113 @@
+.case-study-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--space-3xl) var(--space-2xl);
+  backdrop-filter: blur(10px);
+}
+
+.case-study-header {
+  margin-bottom: var(--space-2xl);
+}
+
+.case-study-tag {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+}
+
+.case-study-header h2 {
+  margin: 0;
+}
+
+.case-study-description {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2xl);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.case-study-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-2xl);
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: var(--space-2xl);
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.result-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.result-content {
+  flex: 1;
+}
+
+.result-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: white;
+  margin-bottom: var(--space-xs);
+}
+
+.result-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+  gap: var(--space-lg);
+  color: #FF9966;
+}
+
+@media (max-width: 768px) {
+  .case-study-card {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .case-study-results {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    padding: var(--space-lg) 0;
+  }
+
+  .case-study-description {
+    font-size: 1rem;
+  }
+
+  .result-number {
+    font-size: 1.5rem;
+  }
+}

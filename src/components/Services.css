@@ -1,0 +1,99 @@
+.services-tabs {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.tab-button {
+  padding: var(--space-md) var(--space-2xl);
+  border: 2px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.tab-button.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-2xl);
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-2xl) var(--space-xl);
+  background: linear-gradient(135deg, rgba(255, 92, 58, 0.03) 0%, rgba(14, 165, 160, 0.03) 100%);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+  background: linear-gradient(135deg, rgba(255, 92, 58, 0.08) 0%, rgba(14, 165, 160, 0.08) 100%);
+}
+
+.service-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .services-tabs {
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .tab-button {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 0.9rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .service-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
